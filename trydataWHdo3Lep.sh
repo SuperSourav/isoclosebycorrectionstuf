@@ -1,0 +1,3 @@
+#athena -c "EVTMAX=1000;doEffiSystematics=False;doP4Systematics=False;do3Lep=True;INFILE='/eos/atlas/atlascerngroupdisk/phys-higgs/HSG3/R21/August2018_rev-97b677a9/mc/Signal/mc16_13TeV.341458.PowhegPythia8EvtGen_CT10_AZNLO_ZH125J_MINLO_vmuvmuWWlvqq_VpT.deriv.DAOD_HIGG3D1.e4212_e5984_s3126_r9364_r9315_p3387/PAOD_2LDF.341458.pool.root'" PhysicsxAODConfig/HWWAnalysis_topOptions.py 2>&1 | tee log_isocorrection.txt;
+
+athena -c "EVTMAX=-1;doEffiSystematics=False;doP4Systematics=False;do3Lep=True;writePAOD_WH=True;INFILE='/eos/user/s/sosen/HIGG3D1_DxAODs/WH_data/data16_13TeV.periodA.physics_Main.PhysCont.DAOD_HIGG3D1.grp16_v01_p3388/DAOD_HIGG3D1.12847919._000098.pool.root.1'" PhysicsxAODConfig/HWWAnalysis_topOptions.py 2>&1 | tee log_isocorrectionWH3L.txt;

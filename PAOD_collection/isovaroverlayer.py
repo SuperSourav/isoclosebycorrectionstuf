@@ -79,7 +79,8 @@ def ploth(isovar, lep, T, Tcorrected):
   text.SetBorderSize(0)
   text.SetFillColor(0)
   text.SetTextAlign(12)
-  text.AddText("%s corrected for %i out of %i %s"%(isovar, correctioncounter(T, Tcorrected), len(T), lep.lower()))
+  corrlep = correctioncounter(T, Tcorrected)
+  text.AddText("%s corrected for %i out of %i %s (~%.1f"%(isovar, corrlep, len(T), lep.lower(), (corrlep*1./len(T))) + "%)")
   text.Draw()
   c.Print("%s_%s.eps"%(lep,isovar))
 
